@@ -11,3 +11,21 @@
  *= require_self
  *= require_tree .
  */
+
+div#content-container {
+  text-align: center;
+  margin: 15% 0;
+}
+
+h1#logo {
+  /*font-family: font-family: 'Over the Rainbow', cursive;*/
+  font-size: 60px;
+  font-family: 'Cutive Mono', serif;
+  text-decoration: underline;
+  margin-bottom: 5%;
+}
+
+div p {
+  font-family: 'Cutive Mono', serif;
+  font-size: 30px;
+}

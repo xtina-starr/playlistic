@@ -11,7 +11,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'pg'
-gem "figaro"
+gem 'figaro'
+gem 'httparty'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

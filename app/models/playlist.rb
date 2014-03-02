@@ -12,6 +12,7 @@ class Playlist < ActiveRecord::Base
       end
       }
       array_of_songs.compact
+    # could have also used array_of_songs.delete("nil") to remove nil elements
     # songs is an array
     # {:response => { :songs => [{:id => "1"}, {:id => 2}, {:id => 3}] } }
   end

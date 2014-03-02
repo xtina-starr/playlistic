@@ -1,9 +1,11 @@
 class PlaylistController < ApplicationController
 
   def player
-    @songs = Playlist.get_playlist_by_similar_artist(params[:artist])
-    @tracks = @songs.map do |track| 
-     track.foreign_id.sub(/spotify-WW:track:/, "") 
+    @playlist = Playlist.get_playlist_by_similar_artist(params[:artist])
+
+
+    @tracks = @playlist.songs.map do |track| 
+     track.spotify_id
     end
     @tracks = @tracks.join(",")
 

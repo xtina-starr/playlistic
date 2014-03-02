@@ -9,6 +9,10 @@ class Song
     puts foreign_id
   end
 
+  def spotify_id
+    self.foreign_id.sub("spotify-WW:track:", "")
+  end
+
 
 
 end

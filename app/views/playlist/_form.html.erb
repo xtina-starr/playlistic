@@ -1,0 +1,5 @@
+<%= form_tag(build_playlist_path, method: "get") do %>
+  <%= label_tag(:artist, "Artist:") %>
+  <%= text_field_tag(:artist) %>
+  <%= submit_tag("Go") %>
+<% end %>

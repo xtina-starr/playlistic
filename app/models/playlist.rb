@@ -25,4 +25,6 @@ class Playlist
     HTTParty.get("http://developer.echonest.com/api/v4/playlist/static?api_key=#{ENV["ECHO_API_KEY"]}&artist=#{artist}&format=json&results=10&type=artist-radio&bucket=id:spotify-WW&bucket=tracks").parsed_response
   end
 
+  
+
 end

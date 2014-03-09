@@ -4,6 +4,7 @@ class Playlist
   def initialize(type, search)
     @type = type 
     @search = search
+    self.get_playlist
   end
 
   def get_playlist

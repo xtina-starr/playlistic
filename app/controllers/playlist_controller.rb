@@ -7,8 +7,6 @@ class PlaylistController < ApplicationController
 
   def player
     @playlist = Playlist.new(params[:type], params[:search])
-    @playlist.get_playlist
-
 
     @tracks = @playlist.songs.map do |track| 
      track.spotify_id

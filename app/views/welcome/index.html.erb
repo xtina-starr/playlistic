@@ -7,7 +7,7 @@
 
   <%= render "playlist/form" %><br>
 
-  <% if @tracks.present? %>
-    <iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:<%= @tracks %>" frameborder="0" allowtransparency="true"></iframe>
+  <% if @playlist.present? %>
+    <iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:<%= @playlist.foreign_ids %>" frameborder="0" allowtransparency="true"></iframe>
   <% end %>
 </div>

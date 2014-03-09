@@ -7,12 +7,6 @@ class PlaylistController < ApplicationController
 
   def player
     @playlist = Playlist.new(params[:type], params[:search])
-
-    @tracks = @playlist.songs.map do |track| 
-     track.spotify_id
-    end
-    @tracks = @tracks.join(",")
-
     render "welcome/index"
   end
 

@@ -15,6 +15,13 @@ class Playlist
    end
   end
 
+  def foreign_ids
+    tracks = self.songs.map do |song|
+      song.spotify_id
+    end
+    tracks.join(",")
+  end
+
   def get_playlist_by_similar_artist
     creates_playlist(artist_search)
   end

@@ -1,10 +1,15 @@
 class Playlist
-  attr_accessor :songs, :artist
+  attr_accessor :type, :search, :songs
 
-  def self.get_playlist_by_similar_artist(artist)
+  def initialize(type, search)
+    @type = type 
+    @search = search
+  end
 
-    artist_playlist = artist_search(artist)
-    creates_playlist(artist_playlist, artist)
+
+
+  def get_playlist_by_similar_artist
+    creates_playlist(artist_search)
     # pp response.parsed_response["response"]["songs"].map { |song| song["title"] }
 
     # Song.new(response.parsed_response["response"]["songs"].last)
@@ -19,21 +24,19 @@ class Playlist
     creates_playlist(search_by_bpm(genre))
   end
 
-  def self.creates_playlist(response, artist = nil)
+  def creates_playlist(response)
       array_of_songs = response["response"]["songs"].map { |song| 
         if song["tracks"].length > 0 
           Song.new(song) 
         end
       }
 
-      playlist = Playlist.new
-      playlist.songs = array_of_songs.compact
-      playlist.artist = artist
-      playlist
+      @songs = array_of_songs.compact
+      self
   end
 
-  def self.artist_search(artist)
-    HTTParty.get("http://developer.echonest.com/api/v4/playlist/static?api_key=#{ENV["ECHO_API_KEY"]}&artist=#{artist}&format=json&results=10&type=artist-radio&bucket=id:spotify-WW&bucket=tracks").parsed_response
+  def artist_search
+    HTTParty.get("http://developer.echonest.com/api/v4/playlist/static?api_key=#{ENV["ECHO_API_KEY"]}&artist=#{@search}&format=json&results=10&type=artist-radio&bucket=id:spotify-WW&bucket=tracks").parsed_response
   end
 
   def self.search_by_bpm(genre)

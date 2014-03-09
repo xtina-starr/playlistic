@@ -1,10 +1,10 @@
 class PlaylistController < ApplicationController
 
   def player
-    if params[:artist].length > 0
+    if params[:artist].present?
       @playlist = Playlist.get_playlist_by_similar_artist(params[:artist])
     else 
-      @playlist = Playlist.get_playlist_by_genre("80s")
+      @playlist = Playlist.get_playlist_by_genre(params[:genre])
    end
 
 

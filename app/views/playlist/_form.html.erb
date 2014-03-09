@@ -3,3 +3,9 @@
   <%= text_field_tag(:artist) %>
   <%= submit_tag("Go") %>
 <% end %>
+
+<%= form_tag(build_playlist_path, method: "get") do %>
+  <%= label_tag(:genre, "Genre:") %>
+  <%= text_field_tag(:genre) %>
+  <%= submit_tag("Go") %>
+<% end %>

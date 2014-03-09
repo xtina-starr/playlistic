@@ -1,6 +1,6 @@
 <%= form_tag(build_playlist_path, method: "get") do %>
-  <%= label_tag(:type, "Type:") %>
-  <%= select_tag(:type, options_for_select([["Artist", "by_artist"], ["Genre", "by_genre"]])) %>
+   <%= label_tag(:type, "Create a") %>
+  <%= select_tag(:type, options_for_select([["Artist", "by_artist"], ["Genre", "by_genre"]])) %> playlist.<br>
   <%= label_tag(:search, "Search:") %>
   <%= text_field_tag(:search) %>
   <%= submit_tag("Go") %>

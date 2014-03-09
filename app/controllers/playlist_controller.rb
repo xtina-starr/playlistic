@@ -6,11 +6,8 @@ class PlaylistController < ApplicationController
   # end
 
   def player
-    if params[:artist].present?
-      @playlist = Playlist.new("by_artist", params[:artist]).get_playlist_by_similar_artist
-    else 
-      @playlist = Playlist.new("by_genre", params[:genre])
-   end
+    @playlist = Playlist.new(params[:type], params[:search])
+    @playlist.get_playlist
 
 
     @tracks = @playlist.songs.map do |track| 

@@ -8,6 +8,6 @@
   <%= render "playlist/form" %><br>
 
   <% if @tracks.present? %>
-    <iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:<%= @tracks %>" frameborder="0" allowtransparency="true"></iframe>
+    <iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:<%= @tracks %>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
   <% end %>
 </div>

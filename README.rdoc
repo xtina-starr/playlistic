@@ -2,7 +2,7 @@
 
 This is a side project I developed to gain more experience working with APIs.
 
-It uses the The Echo Nest API and a spotify player. Version 1 allows users to enter an artist name and returns a playlist of artist similar to that artist. 
+It uses the The Echo Nest API and a spotify player. Version 1 allows users to enter an artist name and returns a playlist of artists similar to that artist. 
 
 You can checkout the application [here](http://playlistic.herokuapp.com/).
 

@@ -1,28 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== README
 
-Things you may want to cover:
+This is a side project I developed to gain more experience working with APIs.
 
-* Ruby version
+It uses the The Echo Nest API and a spotify player. Version 1 allows users to enter an artist name and returns a playlist of artist similar to that artist. 
 
-* System dependencies
+You can checkout the application [here](http://playlistic.herokuapp.com/).
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.

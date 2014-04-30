@@ -6,4 +6,4 @@ It uses the The Echo Nest API and a spotify player. Version 1 allows users to en
 
 You can checkout the application http://playlistic.herokuapp.com/
 
-<tt>rake doc:app</tt>.
+

@@ -1,9 +1,10 @@
 class PlaylistController < ApplicationController
 
-  def player
-    search_string = (params[:artist])
-    uri = URI::encode(search_string)
+  def create
+    search_term = (params[:artist])
+    uri = URI::encode(search_term)
     @playlist = Playlist.get_playlist_by_similar_artist(uri)
+
 
 
     @tracks = @playlist.songs.map do |track| 

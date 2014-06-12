@@ -4,7 +4,7 @@ Playlistic::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
-  get '/player', to: 'playlist#player', as: :build_playlist
+  get '/player', to: 'playlist#create', as: :build_playlist
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

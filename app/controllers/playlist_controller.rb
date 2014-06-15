@@ -6,7 +6,6 @@ class PlaylistController < ApplicationController
     @playlist = Playlist.get_playlist_by_similar_artist(uri)
 
 
-
     @tracks = @playlist.songs.map do |track| 
      track.spotify_id
     end

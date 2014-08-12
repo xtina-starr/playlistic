@@ -7,7 +7,7 @@ class PlaylistController < ApplicationController
 
 
     @tracks = @playlist.songs.map do |track| 
-     track.spotify_id
+      track.spotify_id.sub("spotify:track:", "")
     end
     @tracks = @tracks.join(",")
 
